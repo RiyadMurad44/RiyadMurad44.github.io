@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Money</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body class="form-body">
+    <div class="form-container">
+        <h2>Send Money</h2>
+
+        <div class="balance-display">
+            <p>Current Balance: <span id="balance">$1,000.00</span></p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="recipient">Recipient Username or Email</label>
+                <input type="text" id="recipient" name="recipient" placeholder="Enter recipient's username or email" required>
+            </div>
+            <div class="input-group">
+                <label for="amount">Amount ($)</label>
+                <input type="number" id="amount" name="amount" min="1" required>
+            </div>
+            <div class="input-group">
+                <label for="note">Note (Optional)</label>
+                <input type="text" id="note" name="note" placeholder="Add a note (optional)">
+            </div>
+            <button type="submit">Send Money</button>
+        </form>
+
+        <button class="home-btn" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+</body>
+</html>

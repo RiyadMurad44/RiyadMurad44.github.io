@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Company</h1>
+  
+        <nav>
+          <ul>
+             <li><a href="./index.html">Home</a></li>
+                      <li><a href="./send_money.html">Send Money</a></li>
+                      <li><a href="./deposit.html">Deposit</a></li>
+                      <li><a href="./withdraw.html">Withdraw</a></li>
+                      <li><a href="./guide.html">User Guide</a></li>
+                      <li><a href="./faq.html">FAQ</a></li>
+          </ul>
+        </nav>
+  
+        <div class="actions">
+          <button class="signup-btn" >
+            <a href="./signup.html" class="signup-btn">Sign Up</a>
+              
+          </button>
+          <button class="login-btn">
+            <a href="./login.html" class="login-btn">Login</a>
+          </button>
+        </div>
+      </header>
+
+    <!-- Verification Section -->
+    <section class="verification">
+        <div class="verification-container">
+            <h2>Account Verification</h2>
+            <p>Upload an identification document to verify your account.</p>
+
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="document-type">Select Document Type:</label>
+                    <select id="document-type" name="document-type" required>
+                        <option value="id">National ID</option>
+                        <option value="drivers-license">Driver's License</option>
+                        <option value="passport">Passport</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="document-upload">Upload Document:</label>
+                    <input type="file" id="document-upload" name="document-upload" accept=".jpg,.jpeg,.png,.pdf" required>
+                </div>
+
+                <button type="submit" class="verify-btn">Submit Verification</button>
+            </form>
+            <!-- Back to Home Button -->
+            <div class="back-home">
+                <a href="./index.html" class="home-btn">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+</html>

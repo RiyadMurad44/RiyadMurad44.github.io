@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+  </head>
+  <body class="form-body">
+    <div class="form-container">
+      <h2>Login</h2>
+      <form action="#" method="POST">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            placeholder="Email"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+        <button type="submit">Login</button>
+        <p class="register-link">
+          Don't have an account? <a href="./signup.html">Register</a>
+        </p>
+        <button
+          class="home-button"
+          onclick="window.location.href='./index.html'"
+        >
+          Back to Home
+        </button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+    <script src="./JS/wallet_pages.js"></script>
+    <script type="text/javascript">
+      walletPages.loadFor("index");
+    </script>
+  </body>
+</html>

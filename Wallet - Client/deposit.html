@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Funds</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body class="form-body">
+    <div class="form-container">
+        <h2>Deposit Funds</h2>
+
+        <div class="balance-display">
+            <p>Current Balance: <span id="balance">$1,000.00</span></p>
+        </div>
+
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="amount">Amount ($)</label>
+                <input type="number" id="amount" name="amount" min="1" required>
+            </div>
+            <div class="input-group">
+                <label for="method">Deposit Method</label>
+                <select id="method" name="method" required>
+                    <option value="bank">Bank Transfer</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="crypto">Cryptocurrency</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="transaction-id">Transaction ID</label>
+                <input type="text" id="transaction-id" name="transaction-id" placeholder="Enter transaction ID" required>
+            </div>
+            <button type="submit">Deposit</button>
+        </form>
+
+        <button class="home-btn" onclick="window.location.href='index.html'">Back to Home</button>
+    </div>
+</body>
+</html>
