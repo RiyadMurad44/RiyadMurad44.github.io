@@ -1,5 +1,5 @@
 const walletPages = {};
-walletPages.base_api = "http://localhost/php-deploy/";
+walletPages.base_api = "http://52.47.74.242/Wallet%20-%20Server/";
 
 walletPages.get_data = async function(url){
     try{
@@ -35,16 +35,50 @@ walletPages.loadFor = function(page_name){
     eval("walletPages.load_" + page_name + "();");
 }
 
-walletPages.load_index = async function(){
-    walletPages.index = {};
-    walletPages.index.articles_api = walletPages.base_api + "getArticles.php";
-    walletPages.index.result = await walletPages.get_data(walletPages.index.articles_api);
+// walletPages.load_index = async function(){
+//     walletPages.index = {};
+//     walletPages.index.articles_api = walletPages.base_api + "getArticles.php";
+//     walletPages.index.result = await walletPages.get_data(walletPages.index.articles_api);
 
-    walletPages.index.displayArticles = function(){
+//     walletPages.index.displayArticles = function(){
+//         const articles_div = document.getElementById("articles");
+//         const articles_title = document.getElementById("articles_title");
+//         const articles_list = document.getElementById("articles_list");
+//         const results = walletPages.index.result;
+
+//         if(results.length >0){
+//             articles_title.innerText += " (Size = " + results.length + ")"
+//             articles_div.style.display="inline";
+//             for(let i = 0; i< results.length; i++){
+//                 let item = document.createElement("li");
+//                 item.appendChild(document.createTextNode("Article Name: " + results[i].name + " | Author Name: " + results[i].author_name));
+//                 articles_list.appendChild(item);
+//             }
+//         }else{
+//             console.log("Did NOT Enter");
+//             articles_div.style.display="none";
+//         }
+//     };
+//     walletPages.index.displayArticles();
+// }
+
+// walletPages.load_profile = function(){
+//     walletPages.profile = {};
+//     walletPages.profile.profile_api = walletPages.base_api + "profile.php";
+//     walletPages.profile.name = "Charbel";
+//     walletPages.console("profile", walletPages.profile.profile_api, true);
+// }
+
+walletPages.load_signup = async function(){
+    walletPages.signup = {};
+    walletPages.signup.articles_api = walletPages.base_api + "User/v1/addOrUpdateUser.php";
+    walletPages.signup.result = await walletPages.get_data(walletPages.signup.articles_api);
+
+    walletPages.signup.displayArticles = function(){
         const articles_div = document.getElementById("articles");
         const articles_title = document.getElementById("articles_title");
         const articles_list = document.getElementById("articles_list");
-        const results = walletPages.index.result;
+        const results = walletPages.signup.result;
 
         if(results.length >0){
             articles_title.innerText += " (Size = " + results.length + ")"
@@ -59,13 +93,6 @@ walletPages.load_index = async function(){
             articles_div.style.display="none";
         }
     };
-    walletPages.index.displayArticles();
-}
-
-walletPages.load_profile = function(){
-    walletPages.profile = {};
-    walletPages.profile.profile_api = walletPages.base_api + "profile.php";
-    walletPages.profile.name = "Charbel";
-    walletPages.console("profile", walletPages.profile.profile_api, true);
+    walletPages.signup.displayArticles();
 }
 

@@ -9,7 +9,7 @@
   <body class="form-body">
     <div class="form-container">
       <h2>Sign Up</h2>
-      <form action="#" method="POST">
+      <form action="http://localhost/Digital_Wallet/Wallet - Server/User/v1/addOrUpdateUser.php?id=add" method="POST">
         <div class="input-group">
           <label for="name">Full Name</label>
           <input
@@ -62,13 +62,8 @@
         </div>
         <div class="input-group">
           <label for="confirm-password">Confirm Password</label>
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            id="Confirm Password"
-            name="confirm-password"
-            required
-          />
+          <input type="password" placeholder="Confirm Password" id="confirm-password" name="confirm-password" required />
+
         </div>
         <button type="submit">Sign Up</button>
         <p class="register-link">
@@ -83,10 +78,10 @@
       </form>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios@1.8.1/dist/axios.min.js"></script>
     <script src="./JS/wallet_pages.js"></script>
     <script type="text/javascript">
       walletPages.loadFor("signup");
-    </script>
+    </script> -->
   </body>
 </html>
